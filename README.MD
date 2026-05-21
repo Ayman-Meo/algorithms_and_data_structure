@@ -13,10 +13,10 @@ Contributions to this repository are welcome! If you have an implementation of a
 that is not already included, please feel free to submit a pull request. Make sure to include a clear description of the algorithm or data structure being implemented, as well as any relevant resources or references.
 
 ## License
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more
+This repository is licensed under the Apache License. See the [LICENSE](LICENSE) file for more
 details.
 ## Contact
-If you have any questions or suggestions regarding the code in this repository, please feel free to contact me at [email](mailto:ayman.m.mady@gmail.com)    and my [GitHub](https://github.com/Ayman-Moe).
+If you have any questions or suggestions regarding the code in this repository, please feel free to contact me at [email](mailto:eng.ayman.meo@gmail.com)    and my [GitHub](https://github.com/Ayman-Meo).
 
 ## Project Structure
 ```text
@@ -29,6 +29,7 @@ If you have any questions or suggestions regarding the code in this repository, 
 │       ├── cli/
 │       └── utilities/
 ├── docs/
+|   └── GUIDE.MD
 ├── lib/
 │   ├── include/
 │   │   ├── algorithms/
@@ -86,14 +87,24 @@ If you have any questions or suggestions regarding the code in this repository, 
 │               └── tree/
 ├── CMakeLists.txt
 ├── LICENSE
-├── README.MD
-└── ROADMAP.MD
+└── README.MD
+
 ```
 
 # Directories && Files
 * [CMakeLists.txt](./CMakeLists.txt): Structure file for cmake building tool.
 
 * [docs/](./docs/): This folder will contain **.MD** files for explaining and notices.
+
+* [app/](./app/)
+
+  * [utilities/](./app/include/utilities): Headers of essential functions and classes for make coding and logging easy.
+
+  * [cli/](./app/include/cli): Headers of CLI interface for app.
+
+  * [src/](./app/src/): Implement the CLI app code.
+
+  * [main.cpp](./app/main.cpp): Program's entry point.
 
 * [lib/](./lib/)
   * [include/algorithms](./lib/include/algorithms/): Headers of algorithms functions and classes, write notices 
@@ -107,32 +118,29 @@ If you have any questions or suggestions regarding the code in this repository, 
 
   * [usage_example](./lib/usage_example/): Present usage examples for DSA classes, functions, etc.
 
-* [app/](./app/)
-
-  * [utilities/](./app/include/utilities): Headers of essential functions and classes for make coding and logging easy.
-
-  * [cli/](./app/include/cli): Headers of CLI interface for app.
-
-  * [src/](./app/src/): Implement the app code.
-
-  * [main.cpp](./app/main.cpp): Program's entry point.
-
 * [LICENSE](./LICENSE): The license of the program.
 
-* [GUIDE.MD](./GUIDE.MD): Your guid to study the project.
+* [GUIDE.MD](./docs/GUIDE.MD): Your guid to study the project.
 
 # [Roadmap & Guidelines](./GUIDE.MD)
 
->> This file is your guid to browse the project and study data structure and algorithms.
+ Browsing the project and study data structure and algorithms.
 
 # TO RUN THE PROGRAM
-```bash
-# Create build directory
-  cmake -B build
 
-  # Build the project
-  cmake --build build
+* In Unix/Mac  
+  ```bash
+  # Create build directory
+    cmake -B build
 
   # Run the executable
-  ./build/program
-```
+    ./build/program
+  ```
+
+* In Windows
+  ```powershell
+  # Create build directory
+    cmake -B build
+  # Run the executable
+    .\build\Debug\program.exe
+  ```
