@@ -2,9 +2,11 @@
 This repository contains a collection of C++ implementations of various algorithms and data structures. The code is organized into different folders based on the type of algorithm or data structure being implemented.
 
 ## Resources
-- [C++ Standard Library Documentation](https://en.cppreference.com/w/)
+- [C++ Standard Library Documentation](https://en.cppreference.com/w/),
 - [GeeksforGeeks - Data Structures & Algorithms](https://www.geeksforgeeks.org/data-structures/)
 - [Algorithms for Competitive Programming](https://cp-algorithms.com/)
+- [All C++ Implementation](https://github.com/TheAlgorithms/C-Plus-Plus)
+- [Hight Performance Algorithms - C++](https://en.algorithmica.org/hpc/)
 - Books:
   - "Introduction to Algorithms 4th editions" by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein
   - "Data Structures and Algorithm Analysis in C++" by Mark Allen Weiss
@@ -130,11 +132,10 @@ If you have any questions or suggestions regarding the code in this repository, 
 
 * In Unix/Mac  
   ```bash
-  # Create build directory
-    cmake -B build
-
-  # Run the executable
-    ./build/program
+  # Give run.sh file execute mode
+    chmod +x run.sh
+  # Run it
+    ./run.sh
   ```
 
 * In Windows

@@ -3,27 +3,14 @@
  const char* Log::colorCode(const Color &c) {
     return strColor[static_cast<size_t>(c)];
 }
-
+ const char* Log::colorForLogLevel(const LogLevel &level) {
+    return  strColor[static_cast<size_t>(level)];
+}
+const char* Log::levelToStr(const LogLevel &level) {
+    return strLogLevel[static_cast<size_t>(level)];
+}
  void Log::print(const char* msg, const Color &c, const char* end) {
     cout << colorCode(c) << msg << reset << (end ? end : "\n");
-}
- const char* Log::colorForLogLevel(const LogLevel &level) {
-    switch (level) {
-    case LogLevel::INFO:
-        return colorCode(Color::BLUE);
-    case LogLevel::STEP:
-        return colorCode(Color::CYAN); 
-    case LogLevel::SUCCESS:
-        return colorCode(Color::GREEN);
-    case LogLevel::NOTICE:
-        return colorCode(Color::MAGENTA);
-    case LogLevel::WARNING:
-        return colorCode(Color::YELLOW);    
-    case LogLevel::ERROR:
-        return colorCode(Color::RED);
-    default:
-        return colorCode(Color::YELLOW);
-    }
 }
 
  void Log::info(const string &message) {
@@ -73,7 +60,7 @@
     cout << endl << string(100, '=') << endl;
     cout << format("{}[{}]: {}\n {}: {} {}\n",
                    colorForLogLevel(level),
-                   strLogLevel[static_cast<size_t>(level)],
+                   levelToStr(level),
                    message,
                    file,
                    line,
